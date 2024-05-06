@@ -15,12 +15,12 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v1
-    - uses: actions/setup-node@v1
+    - uses: actions/checkout@v4
+    - uses: actions/setup-node@v4
       with:
-        node-version: '10.x'
+        node-version: '20.x'
     - run: for d in */ ; do cd $d && npm install --no-package-lock --loglevel=error && cd .. ; done
-    - uses: r0zar/sam-deploy-action@v1.4
+    - uses: Tahmid12Khan/sam-deploy-action@master
       env:
         TEMPLATE: 'template.yaml'
         AWS_STACK_NAME: prod-${{ github.actor }}-resourceful
