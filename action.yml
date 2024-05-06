@@ -1,4 +1,4 @@
-name: 'AWS SAM Deploy Action'
+name: 'AWS CLI 2 SAM Deploy Action'
 description: 'Deploy AWS SAM Stack'
 branding:
   icon: 'upload-cloud'
